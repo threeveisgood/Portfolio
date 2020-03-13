@@ -8,15 +8,12 @@ const Card = ({ article }) => {
         <div>
           <div>
             <img
-              src={process.env.API_URL + article.image.url}
+              src={process.env.API_URL + article.image[0].url}
               alt={article.image.url}
               height="100"
             />
           </div>
           <div>
-            <p>
-              {article.category.name}
-            </p>
             <p>
               {article.title}
             </p>
@@ -28,3 +25,7 @@ const Card = ({ article }) => {
 };
 
 export default Card;
+
+{/* <p>
+{article.category.name}
+</p> */}

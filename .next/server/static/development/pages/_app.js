@@ -93,30 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./apollo/queries/category/categories.js":
-/*!***********************************************!*\
-  !*** ./apollo/queries/category/categories.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
-
-const CATEGORIES_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
-    query Categories {
-        categories {
-            id
-            name
-        }
-    }
-`;
-/* harmony default export */ __webpack_exports__["default"] = (CATEGORIES_QUERY);
-
-/***/ }),
-
 /***/ "./components/Copyright.js":
 /*!*********************************!*\
   !*** ./components/Copyright.js ***!
@@ -404,193 +380,6 @@ const layout = props => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (layout);
-
-/***/ }),
-
-/***/ "./components/Nav.js":
-/*!***************************!*\
-  !*** ./components/Nav.js ***!
-  \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Query */ "./components/Query.js");
-/* harmony import */ var _apollo_queries_category_categories__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../apollo/queries/category/categories */ "./apollo/queries/category/categories.js");
-var _jsxFileName = "E:\\Coding\\next-materialui\\components\\Nav.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-const Nav = () => {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, __jsx(_components_Query__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    query: _apollo_queries_category_categories__WEBPACK_IMPORTED_MODULE_3__["default"],
-    id: null,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, ({
-    data: {
-      categories
-    }
-  }) => {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: undefined
-    }, __jsx("nav", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: undefined
-    }, __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      },
-      __self: undefined
-    }, __jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: undefined
-    }, __jsx("li", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: undefined
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: undefined
-    }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: undefined
-    }, "Strapi Blog"))))), __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: undefined
-    }, __jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: undefined
-    }, categories.map((category, i) => {
-      return __jsx("li", {
-        key: category.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: undefined
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: {
-          pathname: "category",
-          query: {
-            id: category.id
-          }
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: undefined
-      }, __jsx("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: undefined
-      }, category.name)));
-    })))));
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Nav);
-
-/***/ }),
-
-/***/ "./components/Query.js":
-/*!*****************************!*\
-  !*** ./components/Query.js ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "E:\\Coding\\next-materialui\\components\\Query.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const Query = ({
-  children,
-  query,
-  id
-}) => {
-  const {
-    data,
-    loading,
-    error
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(query, {
-    variables: {
-      id: id
-    }
-  });
-  if (loading) return __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, "Loading...");
-  if (error) return __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, "Error: ", JSON.stringify(error));
-  return children({
-    data
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Query);
 
 /***/ }),
 
@@ -2569,12 +2358,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _utils_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/apollo */ "./utils/apollo.js");
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
 var _jsxFileName = "E:\\Coding\\next-materialui\\pages\\_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 
 
 
@@ -2598,26 +2385,26 @@ const App = ({
     client: apollo,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx(styled_components__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: theme,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx(Component, _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: undefined
   })))));
@@ -3021,17 +2808,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "graphql-tag":
-/*!******************************!*\
-  !*** external "graphql-tag" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("graphql-tag");
 
 /***/ }),
 

@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import { ThemeProvider } from 'styled-components'
 import { ApolloProvider } from "@apollo/react-hooks";  
 import withData from "../utils/apollo";
-import Nav from '../components/Nav'
 
 const theme = {
   primary: 'green',

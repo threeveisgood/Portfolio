@@ -13,7 +13,7 @@ const Article = () => {
           <div>
             <div>              
               <h1>{article.title}</h1>
-              <img src={process.env.API_URL + article.image.url} alt={article.title} />
+              <img src={process.env.API_URL + article.image[0].url} alt={article.title} />
             </div>
 
             <div>
