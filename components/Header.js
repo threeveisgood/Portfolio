@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import styled from 'styled-components'
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -27,18 +26,12 @@ const useStyles = makeStyles(theme => ({
     },
     appBar: {
         borderBottom: `1px solid ${theme.palette.divider}`,        
-        [theme.breakpoints.down('sm')]: {
-          marginTop: '1em'
-        },
         [theme.breakpoints.up('sm')]: {
           marginTop: '0em'
         }
       },
       toolbar: {
         flexWrap: 'wrap',
-      },
-      toolbarTitle: {
-        
       },
       link: {
         margin: theme.spacing(1, 1.5),
@@ -51,18 +44,15 @@ const useStyles = makeStyles(theme => ({
       }
     },
     menuButton: {
-      display: 'none',
+      display: 'none',      
       [theme.breakpoints.down('xs')]: {
         display: 'inline'
       }
     },
+    logo: {
+      fontWeight: '600',      
+    }
 }))
-
-const StyledAppBar = styled(AppBar)`
-  @media screen and (min-width:601px) and (max-width:660px) {
-    margin-top: 1em;
-  }
-`
 
 const Header = () => {
     const classes = useStyles();
@@ -70,14 +60,14 @@ const Header = () => {
     return (    
         <>
          <CssBaseline />
-         <StyledAppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
+         <AppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
          <Toolbar className={classes.toolbar}> 
          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-           <Link href="/">
-              Main
+           <Link href="/" className={classes.logo}>
+              Portfolio
            </Link>
           </Typography>
           <nav className={classes.nav}>
@@ -92,7 +82,7 @@ const Header = () => {
             </Link>
           </nav>              
         </Toolbar>
-      </StyledAppBar>
+      </AppBar>
       </>
     )
 }

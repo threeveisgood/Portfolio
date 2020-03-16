@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from '@material-ui/core/styles';
 import { ApolloProvider } from "@apollo/react-hooks";  
 import withData from "../utils/apollo";
-
-const theme = {
-  primary: 'green',
-}
+import theme from '../src/theme';
 
 const App = ({ Component, pageProps, apollo }) => { 
   useEffect(() => {
@@ -15,9 +12,9 @@ const App = ({ Component, pageProps, apollo }) => {
       jssStyles.parentNode.removeChild(jssStyles)
     },[])
 
-    return (
-      <ApolloProvider client={apollo}>
-       <ThemeProvider theme={theme}>
+    return (      
+      <ApolloProvider client={apollo}>              
+       <ThemeProvider theme={theme}>         
          <Layout>
           <Component {...pageProps} />
          </Layout>
